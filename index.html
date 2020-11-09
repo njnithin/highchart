@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Skill Evaluation
+        </title>
+        <!-- Libraries -->
+        <link href="css/lib/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/lib/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css"/>
+        <link href="css/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="css/lib/flags32.css" rel="stylesheet" type="text/css"/>
+        <!-- End of Libraries -->
+        <link href="css/common.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <!-- Application Wrapper -->
+        <div class="app-wrap" id="app" v-cloak="">
+            <!-- Popup Overlay -->
+            <div :class="{'show-popup':  showPopupScreen}" @click="closePopupScreen($event)" class="popup-screen">
+                <div class="content-area">
+                    <span class="fa fa-lg fa-close close-icon">
+                    </span>
+                    <!-- Share Popup area -->
+                    <div class="share-chart" v-show="sharePopupArea === true">
+                        <textarea :value="shareLink" name="share-url">
+                        </textarea>
+                        <i class="success-icon fa fa-lg fa-check"></i>
+                        <button @click="copyShareLink" class="copy-share-link btn-style-1">
+                            Copy Share Link
+                        </button>
+
+                        <input :value="shareLink" class="share-input" name="share-input" style="position: fixed;z-index: -1" type="text-area">
+                        </input>
+                    </div>
+                    <!-- End of Share Popup area -->
+                </div>
+            </div>
+            <!-- End of Popup Overlay -->
+            <!-- Tab Section -->
+            <div class="tab-section">
+                <ul class="tab-item-wrap">
+                    <li :class="{'active': (tabSettings.activeTab === index+1)}" v-for="(item,index) in tabSettings.tabs">
+                        <i :class="item.icon" aria-hidden="true" class="fa">
+                        </i>
+                        <span :class="item.type" :id="'tab-'+index" @click="tabChange($event,index)">
+                            [[ item.text ]]
+                        </span>
+                    </li>
+                    <!-- <span class="tab-index">
+                        [[ tabSettings.activeTab ]]
+                    </span> -->
+                </ul>
+            </div>
+            <!-- End of Tab Section -->
+            <!-- Filter Plot area Section -->
+            <div class="filter-plotarea clearfix">
+                <!-- Left Section -->
+                <div class="left-section">
+                    <div class="filter-section">
+                        <div class="title-section">
+                            <span>
+                                Filter
+                            </span>
+                        </div>
+                        <!-- Filter For Chart Table Map -->
+                        <div class="filters-wrap" v-show="tabSettings.activeTab != 4">
+                            <div :class="filterLabel" class="each-filter-item" v-for="(filterData,filterLabel) in filterData">
+                                <label :for="filterLabel">
+                                    [[ filterLabel ]]
+                                </label>
+                                <select :id="'id-'+ filterLabel" :name="filterLabel" @change="filterChange($event)" v-model="selectedFilters[filterLabel]">
+                                    <template v-for="(option,index) in filterData">
+                                        <option :value="option" v-if="option.length ">
+                                            [[option]]
+                                        </option>
+                                    </template>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- End of Filter For Chart Table Map -->
+                        <!-- Filter For Interactive Map Section -->
+                        <div class="filters-wrap" v-show="tabSettings.activeTab === 4">
+                            Filter Data Not Provided
+                            <!-- <div :class="filterLabel" class="each-filter-item" v-for="(filterData,filterLabel) in filterData">
+                                <label :for="filterLabel">
+                                    [[ filterLabel ]]
+                                </label>
+                                <select :id="'id'+ filterLabel" :name="filterLabel" @change="filterChange($event)" v-model="selectedFilters[filterLabel]">
+                                    <template v-for="(option,index) in filterData">
+                                        <option :value="option" v-if="option.length ">
+                                            [[option]]
+                                        </option>
+                                    </template>
+                                </select>
+                            </div> -->
+                        </div>
+                        <!-- End of Filter For Interactive Map Section -->
+                    </div>
+                </div>
+                <!-- End of Left Section -->
+                <div class="right-section">
+                    <div v-show="!(tabSettings.activeTab === 4) && (loaderFlag === false)">
+                        <!-- Top Menu Section -->
+                        <div class="top-menu-section">
+                            <!-- Year Selector -->
+                            <div class="year-selector" v-if="filterData.year.length > 1">
+                                <span class="title">
+                                    Estimated Year:
+                                </span>
+                                <template v-for="(year,index) in filterData.year">
+                                    <span :class="{'active': selectedFilters.year === year}" class="strip">
+                                        <span class="flag">
+                                        </span>
+                                        <span @click="yearSelected($event,year)" class="year">
+                                            [[ year ]]
+                                        </span>
+                                    </span>
+                                </template>
+                            </div>
+                            <!-- End of Year Selector -->
+                            <!-- Right Menu Section -->
+                            <div class="right-menus" v-if="tabSettings.activeTab === 1">
+                                <!-- <span class="circle custom-menu-item">
+                                    <i aria-hidden="true" class="fa fa-bars fa-lg">
+                                    </i>
+                                </span> -->
+                                <span @click.stop="rightMenuClick($event)" class="download circle custom-menu-item" >
+                                    <i aria-hidden="true" class="fa fa-bars fa-lg" >
+                                    </i>
+                                    <ul class="dropdown fa fa-sort-up">
+                                        <li @click="chartObject.print()" class="fa fa-file-photo-o">Print Chart</li>
+                                        <hr>
+
+                                    </ul>
+                                </span>
+                                <span @click.stop="rightMenuClick($event)" class="chart-select-menu square custom-menu-item" :class="chartSettings.type">
+                                    <i aria-hidden="true" class="fa fa-lg" :class="activeChartClass">
+                                    </i>
+                                    <ul class="dropdown fa fa-sort-up">
+                                        <li @click="changeChart($event,'column')" class="active-item fa fa-bar-chart" value="column">
+                                            
+                                        </li>
+                                        <li @click="changeChart($event,'bar')" class="fa fa-align-left" value="bar">
+                                            
+                                        </li>
+                                        <li @click="changeChart($event,'line')" class="fa fa-line-chart" value="line">
+                                            
+                                        </li>
+                                        <li @click="changeChart($event,'area')" class="fa fa-area-chart" value="area">
+                                            
+                                        </li>
+                                    </ul>
+                                </span>
+                   <!--              <select @change="createChart()" id="chart-select" name="chart-select" v-model="chartSettings.type">
+                                    <option value="column">
+                                        Bar Vertical
+                                    </option>
+                                    <option value="bar">
+                                        Bar Horizontal
+                                    </option>
+                                    <option value="line">
+                                        Line Chart
+                                    </option>
+                                    <option value="area">
+                                        Area Chart
+                                    </option>
+                                </select> -->
+                                <span @click.stop="rightMenuClick($event)" class="download circle custom-menu-item">
+                                    <i aria-hidden="true" class="fa fa-download fa-lg">
+                                    </i>
+                                    <ul class="dropdown fa fa-sort-up">
+                                    	<li @click="chartObject.exportChart({filename: selectedFilters.indicators})" class="fa fa-file-photo-o">Download PNG</li>
+                                    	<li @click="chartObject.exportChart({type: 'image/jpeg',filename: selectedFilters.indicators})" class="fa fa-file-photo-o">Download JPEG</li>
+                                    	<li @click="chartObject.exportChart({type: 'application/pdf',filename: selectedFilters.indicators})" class="fa fa-file-pdf-o">Download PDF</li>
+                                    	<li @click="chartObject.exportChart({type: 'image/svg+xml',filename: selectedFilters.indicators})" class="fa fa-file-photo-o">Download SVG</li>
+                                    	<hr>
+
+                                    </ul>
+                                </span>
+                                <span @click="rightMenuClick($event)" class="share custom-menu-item">
+                                    <i aria-hidden="true" class="fa fa-share-alt fa-lg">
+                                    </i>
+                                </span>
+                            </div>
+                            <!-- Right Menu Section -->
+                        </div>
+                        <!-- End of Top Menu Section -->
+                        <template v-if="countryPlotData.length">
+                            <!-- Chart -->
+                            <div v-if="tabSettings.activeTab === 1">
+                                <!-- <pre>
+                            		[[countryChartData]]
+                            	</pre> -->
+                                <div class="chart-container" id="chart-container">
+                                </div>
+                            </div>
+                            <!-- End of Chart -->
+                            <!-- HTML Table -->
+                            <!-- End of HTML Table -->
+                            <!-- Table -->
+                            <div class="table-section-wrap" v-else-if="tabSettings.activeTab === 2 ">
+                                <!-- HTML Table -->
+                                <table class="custom-table f32">
+                                    <caption>
+                                        [[ selectedFilters.indicators ]]
+                                    </caption>
+                                    <tbody>
+                                        <tr class="head-row">
+                                            <th class="flag-name">
+                                            </th>
+                                            <th class="country-name">
+                                                Country
+                                            </th>
+                                            <th class="country-name">
+                                                Score
+                                            </th>
+                                        </tr>
+                                        <tr :class="country.name.replace(/\s+/g, '-').toLowerCase()" v-for="(country,index) in countryPlotData">
+                                            <td class="first-col">
+                                                <span :class="country.name.replace(/\s+/g, '-').toLowerCase()" class="flag">
+                                                </span>
+                                            </td>
+                                            <td class="second-col">
+                                                [[country.name]]
+                                            </td>
+                                            <td class="third-col">
+                                                [[country.value]]
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- End of HTML Table -->
+                                <!--    <div class="table-title">
+                                    [[ selectedFilters.indicators ]]
+                                </div>
+                                <div class="table-section f32">
+                                    <template v-for="i in 3">
+                                        <div :class="'col-'+i" class="each-column">
+                                            <div class="col-head">
+                                                <div v-if="i=== 1">
+                                                    
+                                                </div>
+                                                <div v-else-if="i=== 2">
+                                                    Country
+                                                </div>
+                                                <div v-else-if="i=== 3">
+                                                    Score
+                                                </div>
+                                            </div>
+                                            <template v-for="(country,index) in countryPlotData">
+                                                <div :class="country.name.replace(/\s+/g, '-').toLowerCase()" v-if="i=== 1">
+                                                    <span :class="country.name.replace(/\s+/g, '-').toLowerCase()" class="flag">
+                                                    </span>
+                                                </div>
+                                                <div v-else-if="i=== 2">
+                                                    [[country.name]]
+                                                </div>
+                                                <div v-else-if="i=== 3">
+                                                    [[country.value]]
+                                                </div>
+                                            </template>
+                                        </div>
+                                    </template>
+                                </div> -->
+                            </div>
+                            <!-- End of Table -->
+                            <!-- Map -->
+                            <div v-else-if="tabSettings.activeTab === 3 ">
+                                <div id="map-area">
+                                </div>
+                            </div>
+                            <!-- End of Map -->
+                            <!--   <pre>
+                                  [[ countryPlotData ]] 
+                              </pre>
+ -->
+                        </template>
+                        <template v-else="">
+                            <div class="no-data">
+                                No data found
+                            </div>
+                        </template>
+                    </div>
+                    <div v-show="tabSettings.activeTab === 4 && (loaderFlag === false)">
+                        <!-- Interactive Data Analysis -->
+                        <div id="interactive-map-area">
+                        </div>
+                        <!-- End of Interactive Data Analysis -->
+                    </div>
+                </div>
+            </div>
+            <!-- End of Filter Plot area Section -->
+        </div>
+        <!-- End of Application Wrapper -->
+        <!-- Scripts -->
+        <script src="js/lib/jquery-3.1.1.min.js">
+        </script>
+        <!-- Highchart and highmaps  -->
+        <script src="js/lib/highmaps.js">
+        </script>
+        <script src="js/lib/world.js">
+        </script>
+        <!--    <script src="js/lib/world-palestine-highres.js">
+        </script> -->
+        <script src="js/lib/highcharts.js">
+        </script>
+        <script src="js/lib/series-label.js">
+        </script>
+        <script src="js/lib/exporting.js">
+        </script>
+        <script src="js/lib/export-data.js">
+        </script>
+        <!-- End of Highchart and highmaps  -->
+        <script src="js/lib/axios.min.js">
+        </script>
+        <script src="js/lib/mCustomScrollbar.concat.min.js">
+        </script>
+        <script src="js/lib/vue.js">
+        </script>
+        <script src="js/component.js">
+        </script>
+        <!-- End of Scripts -->
+    </body>
+</html>

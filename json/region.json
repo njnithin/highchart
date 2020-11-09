@@ -1,0 +1,1060 @@
+{
+  "yeardata": {
+    "2012": {
+      "year": "2012",
+      "indicators": [
+        "Number of additional users of modern methods of contraception",
+        "Modern contraceptive prevalence rate, mCPR (all women)",
+        "Percentage of women with an unmet need for modern methods of contraception (married or in-union women)",
+        "Percentage of women whose demand is satisfied with a modern method of contraception (married or in-union women)",
+        "Number of unintended pregnancies"
+      ],
+      "indicatorscolor": [
+        "#83c6e1",
+        "#badbef",
+        "#8a9dbf"
+      ],
+      "regions": {
+        "Central Africa": {
+          "label": "Central Africa",
+          "countries": {
+            "Cameroon": {
+              "name": "Cameroon",
+              "hundredScore": "No",
+              "score": [
+                0,
+                17,
+                33.3,
+                31.3,
+                304000
+              ]
+            },
+            "Central African Republic": {
+              "name": "Central African Republic",
+              "hundredScore": "Yes",
+              "score": [
+                0,
+                11.8,
+                31.3,
+                25.6,
+                57000
+              ]
+            },
+            "Chad": {
+			  "name": "Chad",
+			  "hundredScore": "Yes",
+			  "score": [
+				0,
+				2.6,
+				24.4,
+				10.2,
+				156000
+			  ]
+			},
+			"Republic of Congo": {
+			  "name": "Republic of Congo",
+			  "hundredScore": "Yes",
+			  "score": [
+				0,
+				22.6,
+				40.8,
+				33.2,
+				71000
+			  ]
+			},
+			"Democratic Republic of the Congo": {
+			  "name": "Democratic Republic of the Congo",
+			  "hundredScore": "Yes",
+			  "score": [
+				0,
+				8.1,
+				40.7,
+				16.08,
+				1372000
+			  ]
+			},
+			"Sao Tome and Principe": {
+			  "name": "Sao Tome and Principe",
+			  "hundredScore": "Yes",
+			  "score": [
+				0,
+				29.2,
+				37.8,
+				48.7,
+				4000
+			  ]
+			}
+
+          }
+        },
+        "South Asia": {
+          "label": "South Asia",
+          "countries": {
+            "Afghanistan": {
+              "name": "Afghanistan",
+              "hundredScore": "No",
+              "score": [
+                0,
+                12.8,
+                27.6,
+                41.6,
+                638000
+              ]
+            },
+            "Bangladesh": {
+              "name": "Bangladesh",
+              "hundredScore": "Yes",
+              "score": [
+                0,
+                11.8,
+                31.3,
+                25.6,
+                57000
+              ]
+            },
+            "Bhutan": {
+			  "name": "Bhutan",
+			  "hundredScore": "Yes",
+			  "score": [
+				0,
+				46.8,
+				14.3,
+				81,
+				8000
+			  ]
+			},
+			"India": {
+			  "name": "India",
+			  "hundredScore": "Yes",
+			  "score": [
+				0,
+				38.4,
+				20.9,
+				71.2,
+				13491000
+			  ]
+			},
+			"Nepal": {
+			  "name": "Nepal",
+			  "hundredScore": "Yes",
+			  "score": [
+				0,
+				34.6,
+				26.8,
+				62.6,
+				373000
+			  ]
+			},
+			"Pakistan": {
+			  "name": "Pakistan",
+			  "hundredScore": "Yes",
+			  "score": [
+				0,
+				17.1,
+				29.7,
+				47.5,
+				2083000
+			  ]
+			}
+		  }
+       },
+        "Caribbean, Central & South America": {
+          "label": "Caribbean, Central & South America",
+          "countries": {
+            "Bolivia": {
+              "name": "Bolivia",
+              "hundredScore": "No",
+              "score": [
+				0,
+				27.1,
+				41,
+				48.8,
+				314000
+              ]
+            },
+            "Haiti": {
+              "name": "Haiti",
+              "hundredScore": "Yes",
+              "score": [
+                1305000,
+                21.5,
+                38.7,
+                44.6,
+                249000
+              ]
+            },
+            "Honduras": {
+			  "name": "Honduras",
+			  "hundredScore": "Yes",
+			  "score": [
+				0,
+				42.4,
+				20.2,
+				75.7,
+				152000
+			  ]
+			},
+			"Nicaragua": {
+			  "name": "Nicaragua",
+			  "hundredScore": "Yes",
+			  "score": [
+				0,
+				50.9,
+				11,
+				87.3,
+				94000
+			  ]
+			}
+		  }
+       }
+}
+    },
+    "2013": {
+      "year": "2013",
+      "indicators": [
+        "Number of additional users of modern methods of contraception",
+        "Modern contraceptive prevalence rate, mCPR (all women)",
+        "Percentage of women with an unmet need for modern methods of contraception (married or in-union women)",
+        "Percentage of women whose demand is satisfied with a modern method of contraception (married or in-union women)",
+        "Number of unintended pregnancies"
+      ],
+      "indicatorscolor": [
+        "#83c6e1",
+        "#badbef",
+        "#8a9dbf"
+      ],
+      "regions": {
+        "Central Africa": {
+          "label": "Central Africa",
+          "countries": {
+            "Cameroon": {
+              "name": "Cameroon",
+              "hundredScore": "No",
+              "score": [
+                60000,
+                17.6,
+                33.5,
+                32,
+                308000
+              ]
+            },
+            "Central African Republic": {
+              "name": "Central African Republic",
+              "hundredScore": "Yes",
+              "score": [
+                12000,
+                12.5,
+                31.5,
+                26.7,
+                58000
+              ]
+            },
+            "Chad": {
+			  "name": "Chad",
+			  "hundredScore": "Yes",
+			  "score": [
+				16000,
+				3,
+				24.7,
+				11.7,
+				160000
+			  ]
+			},
+			"Republic of Congo": {
+			  "name": "Republic of Congo",
+			  "hundredScore": "Yes",
+			  "score": [
+				7000,
+				22.8,
+				40,
+				33.8,
+				71000
+			  ]
+			},
+			"Democratic Republic of the Congo": {
+			  "name": "Democratic Republic of the Congo",
+			  "hundredScore": "Yes",
+			  "score": [
+				63000,
+				8.2,
+				40.7,
+				16.2,
+				1402000
+			  ]
+			},
+			"Sao Tome and Principe": {
+			  "name": "Sao Tome and Principe",
+			  "hundredScore": "Yes",
+			  "score": [
+				0,
+				29.9,
+				37.1,
+				49.7,
+				4000
+			  ]
+			}
+
+          }
+        },
+        "South Asia": {
+          "label": "South Asia",
+          "countries": {
+            "Afghanistan": {
+              "name": "Afghanistan",
+              "hundredScore": "No",
+              "score": [
+                51000,
+                13.0,
+                27.5,
+                42.1,
+                639000
+              ]
+            },
+            "Bangladesh": {
+              "name": "Bangladesh",
+              "hundredScore": "Yes",
+              "score": [
+                276000,
+                42.1,
+                20.1,
+                73.2,
+                2063000
+              ]
+            },
+            "Bhutan": {
+			  "name": "Bhutan",
+			  "hundredScore": "Yes",
+			  "score": [
+				3000,
+				47.5,
+				13.9,
+				81.6,
+				8000
+			  ]
+			},
+			"India": {
+			  "name": "India",
+			  "hundredScore": "Yes",
+			  "score": [
+				1585000,
+				38.3,
+				20.9,
+				71.3,
+				13473000
+			  ]
+			},
+			"Nepal": {
+			  "name": "Nepal",
+			  "hundredScore": "Yes",
+			  "score": [
+				125000,
+				35.4,
+				25.5,
+				64.3,
+				373000
+			  ]
+			},
+			"Pakistan": {
+			  "name": "Pakistan",
+			  "hundredScore": "Yes",
+			  "score": [
+				1083000,
+				19.1,
+				29.1,
+				50.7,
+				2094000
+			  ]
+			}
+		  }
+       },
+        "Caribbean, Central & South America": {
+          "label": "Caribbean, Central & South America",
+          "countries": {
+            "Bolivia": {
+              "name": "Bolivia",
+              "hundredScore": "No",
+              "score": [
+				0,
+				27.7,
+				40,
+				49.8,
+				315000
+              ]
+            },
+            "Haiti": {
+              "name": "Haiti",
+              "hundredScore": "Yes",
+              "score": [
+                27000,
+                22.1,
+                38,
+                45.7,
+                248000
+              ]
+            },
+            "Honduras": {
+			  "name": "Honduras",
+			  "hundredScore": "Yes",
+			  "score": [
+				23000,
+				42.5,
+				20.1,
+				75.8,
+				152000
+			  ]
+			},
+			"Nicaragua": {
+			  "name": "Nicaragua",
+			  "hundredScore": "Yes",
+			  "score": [
+				10000,
+				50.9,
+				11,
+				87.3,
+				93000
+			  ]
+			}
+		  }
+       }
+
+        
+      }
+    },
+    "2014": {
+      "year": "2014",
+      "indicators": [
+        "Number of additional users of modern methods of contraception",
+        "Modern contraceptive prevalence rate, mCPR (all women)",
+        "Percentage of women with an unmet need for modern methods of contraception (married or in-union women)",
+        "Percentage of women whose demand is satisfied with a modern method of contraception (married or in-union women)",
+        "Number of unintended pregnancies"
+      ],
+      "indicatorscolor": [
+        "#83c6e1",
+        "#badbef",
+        "#8a9dbf"
+      ],
+      "regions": {
+        "Central Africa": {
+          "label": "Central Africa",
+          "countries": {
+            "Cameroon": {
+              "name": "Cameroon",
+              "hundredScore": "No",
+              "score": [
+                130000,
+                18.4,
+                33.5,
+                33,
+                311000
+              ]
+            },
+            "Central African Republic": {
+              "name": "Central African Republic",
+              "hundredScore": "Yes",
+              "score": [
+                22000,
+                13.125,
+                31.6,
+                27.5,
+                58000
+              ]
+            },
+            "Chad": {
+			  "name": "Chad",
+			  "hundredScore": "Yes",
+			  "score": [
+				36000,
+				3.7,
+				25,
+				13.4,
+				163000
+			  ]
+			},
+			"Republic of Congo": {
+			  "name": "Republic of Congo",
+			  "hundredScore": "Yes",
+			  "score": [
+				13000,
+				22.9,
+				39.3,
+				34.3,
+				72000
+			  ]
+			},
+			"Democratic Republic of the Congo": {
+			  "name": "Democratic Republic of the Congo",
+			  "hundredScore": "Yes",
+			  "score": [
+				230000,
+				8.8,
+				40.7,
+				17.2,
+				1432000
+			  ]
+			},
+			"Sao Tome and Principe": {
+			  "name": "Sao Tome and Principe",
+			  "hundredScore": "Yes",
+			  "score": [
+				1000,
+				30.5,
+				36.4,
+				50.8,
+				5000
+			  ]
+			}
+
+          }
+        },
+        "South Asia": {
+          "label": "South Asia",
+          "countries": {
+            "Afghanistan": {
+              "name": "Afghanistan",
+              "hundredScore": "No",
+              "score": [
+                106000,
+                13.2,
+                27.4,
+                42.5,
+                640000
+              ]
+            },
+            "Bangladesh": {
+              "name": "Bangladesh",
+              "hundredScore": "Yes",
+              "score": [
+                509000,
+                42.1,
+                20.1,
+                73.1,
+                2051000
+              ]
+            },
+            "Bhutan": {
+			  "name": "Bhutan",
+			  "hundredScore": "Yes",
+			  "score": [
+				6000,
+				48.1,
+				13.5,
+				82.2,
+				8000
+			  ]
+			},
+			"India": {
+			  "name": "India",
+			  "hundredScore": "Yes",
+			  "score": [
+				3136000,
+				38.2,
+				20.9,
+				71.2,
+				13455000
+			  ]
+			},
+			"Nepal": {
+			  "name": "Nepal",
+			  "hundredScore": "Yes",
+			  "score": [
+				246000,
+				36.2,
+				24.8,
+				65.4,
+				373000
+			  ]
+			},
+			"Pakistan": {
+			  "name": "Pakistan",
+			  "hundredScore": "Yes",
+			  "score": [
+				1845000,
+				20.3,
+				28.7,
+				52.6,
+				2104000
+			  ]
+			}
+		  }
+       },
+        "Caribbean, Central & South America": {
+          "label": "Caribbean, Central & South America",
+          "countries": {
+            "Bolivia": {
+              "name": "Bolivia",
+              "hundredScore": "No",
+              "score": [
+				58000,
+				28.3,
+				39.5,
+				50,
+				316000
+              ]
+            },
+            "Haiti": {
+              "name": "Haiti",
+              "hundredScore": "Yes",
+              "score": [
+                51000,
+                22.6,
+                37.5,
+                46.6,
+                248000
+              ]
+            },
+            "Honduras": {
+			  "name": "Honduras",
+			  "hundredScore": "Yes",
+			  "score": [
+				45000,
+				42.6,
+				19.9,
+				76.1,
+				152000
+			  ]
+			},
+			"Nicaragua": {
+			  "name": "Nicaragua",
+			  "hundredScore": "Yes",
+			  "score": [
+				21000,
+				50.9,
+				11,
+				87.3,
+				92000
+			  ]
+			}
+		  }
+       }
+
+
+        
+      }
+    },
+    "2015": {
+      "year": "2015",
+      "indicators": [
+        "Number of additional users of modern methods of contraception",
+        "Modern contraceptive prevalence rate, mCPR (all women)",
+        "Percentage of women with an unmet need for modern methods of contraception (married or in-union women)",
+        "Percentage of women whose demand is satisfied with a modern method of contraception (married or in-union women)",
+        "Number of unintended pregnancies"
+      ],
+      "indicatorscolor": [
+        "#83c6e1",
+        "#badbef",
+        "#8a9dbf"
+      ],
+      "regions": {
+        "Central Africa": {
+          "label": "Central Africa",
+          "countries": {
+            "Cameroon": {
+              "name": "Cameroon",
+              "hundredScore": "No",
+              "score": [
+                203000,
+                19.2,
+                33.6,
+                33.8,
+                314000
+              ]
+            },
+            "Central African Republic": {
+              "name": "Central African Republic",
+              "hundredScore": "Yes",
+              "score": [
+                36000,
+                13.8,
+                31.8,
+                28.5,
+                59000
+              ]
+            },
+            "Chad": {
+			  "name": "Chad",
+			  "hundredScore": "Yes",
+			  "score": [
+				49000,
+				3.9,
+				25.2,
+				14.2,
+				167000
+			  ]
+			},
+			"Republic of Congo": {
+			  "name": "Republic of Congo",
+			  "hundredScore": "Yes",
+			  "score": [
+				21000,
+				23,
+				38.6,
+				34.9,
+				73000
+			  ]
+			},
+			"Democratic Republic of the Congo": {
+			  "name": "Democratic Republic of the Congo",
+			  "hundredScore": "Yes",
+			  "score": [
+				405000,
+				9.4,
+				40.8,
+				18.2,
+				1463000
+			  ]
+			},
+			"Sao Tome and Principe": {
+			  "name": "Sao Tome and Principe",
+			  "hundredScore": "Yes",
+			  "score": [
+				1000,
+				31,
+				35.7,
+				51.6,
+				5000
+			  ]
+			}
+
+          }
+        },
+        "South Asia": {
+          "label": "South Asia",
+          "countries": {
+            "Afghanistan": {
+              "name": "Afghanistan",
+              "hundredScore": "No",
+              "score": [
+                200000,
+                13.9,
+                27.4,
+                43.8,
+                641000
+              ]
+            },
+            "Bangladesh": {
+              "name": "Bangladesh",
+              "hundredScore": "Yes",
+              "score": [
+                875000,
+                42.3,
+                20,
+                73.3,
+                2039000
+              ]
+            },
+            "Bhutan": {
+			  "name": "Bhutan",
+			  "hundredScore": "Yes",
+			  "score": [
+				9000,
+				48.6,
+				13.2,
+				82.7,
+				8000
+			  ]
+			},
+			"India": {
+			  "name": "India",
+			  "hundredScore": "Yes",
+			  "score": [
+				4636000,
+				38.2,
+				21,
+				71,
+				13437000
+			  ]
+			},
+			"Nepal": {
+			  "name": "Nepal",
+			  "hundredScore": "Yes",
+			  "score": [
+				364000,
+				37,
+				24.1,
+				66.5,
+				374000
+			  ]
+			},
+			"Pakistan": {
+			  "name": "Pakistan",
+			  "hundredScore": "Yes",
+			  "score": [
+				2346000,
+				21,
+				28.6,
+				53.4,
+				2115000
+			  ]
+			}
+		  }
+       },
+        "Caribbean, Central & South America": {
+          "label": "Caribbean, Central & South America",
+          "countries": {
+            "Bolivia": {
+              "name": "Bolivia",
+              "hundredScore": "No",
+              "score": [
+				89000,
+				29,
+				38.6,
+				51.8,
+				317000
+              ]
+            },
+            "Haiti": {
+              "name": "Haiti",
+              "hundredScore": "Yes",
+              "score": [
+                79000,
+                23.2,
+                36.9,
+                47.7,
+                247000
+              ]
+            },
+            "Honduras": {
+			  "name": "Honduras",
+			  "hundredScore": "Yes",
+			  "score": [
+				68000,
+				42.8,
+				19.8,
+				76.2,
+				152000
+			  ]
+			},
+			"Nicaragua": {
+			  "name": "Nicaragua",
+			  "hundredScore": "Yes",
+			  "score": [
+				29000,
+				50.7,
+				11.1,
+				87.1,
+				91000
+			  ]
+			}
+		  }
+       }
+
+        
+      }
+    },
+    "2016": {
+      "year": "2016",
+      "indicators": [
+        "Number of additional users of modern methods of contraception",
+        "Modern contraceptive prevalence rate, mCPR (all women)",
+        "Percentage of women with an unmet need for modern methods of contraception (married or in-union women)",
+        "Percentage of women whose demand is satisfied with a modern method of contraception (married or in-union women)",
+        "Number of unintended pregnancies"
+      ],
+      "indicatorscolor": [
+        "#83c6e1",
+        "#badbef",
+        "#8a9dbf"
+      ],
+      "regions": {
+        "Central Africa": {
+          "label": "Central Africa",
+          "countries": {
+            "Cameroon": {
+              "name": "Cameroon",
+              "hundredScore": "No",
+              "score": [
+                285000,
+                20,
+                33.5,
+                34.9,
+                318000
+              ]
+            },
+            "Central African Republic": {
+              "name": "Central African Republic",
+              "hundredScore": "Yes",
+              "score": [
+                48000,
+                14.5,
+                31.9,
+                29.4,
+                59000
+              ]
+            },
+            "Chad": {
+			  "name": "Chad",
+			  "hundredScore": "Yes",
+			  "score": [
+				63000,
+				4.2,
+				25.5,
+				15,
+				170000
+			  ]
+			},
+			"Republic of Congo": {
+			  "name": "Republic of Congo",
+			  "hundredScore": "Yes",
+			  "score": [
+				39000,
+				24.1,
+				38.1,
+				36.2,
+				74000
+			  ]
+			},
+			"Democratic Republic of the Congo": {
+			  "name": "Democratic Republic of the Congo",
+			  "hundredScore": "Yes",
+			  "score": [
+				568000,
+				9.9,
+				40.8,
+				19,
+				1493000
+			  ]
+			},
+			"Sao Tome and Principe": {
+			  "name": "Sao Tome and Principe",
+			  "hundredScore": "Yes",
+			  "score": [
+				2000,
+				31.5,
+				35,
+				52.5,
+				5000
+			  ]
+			}
+
+          }
+        },
+        "South Asia": {
+          "label": "South Asia",
+          "countries": {
+            "Afghanistan": {
+              "name": "Afghanistan",
+              "hundredScore": "No",
+              "score": [
+                296000,
+                14.6,
+                27.5,
+                45,
+                642000
+              ]
+            },
+            "Bangladesh": {
+              "name": "Bangladesh",
+              "hundredScore": "Yes",
+              "score": [
+                1305000,
+                42.7,
+                19.8,
+                73.7,
+                2026000
+              ]
+            },
+            "Bhutan": {
+			  "name": "Bhutan",
+			  "hundredScore": "Yes",
+			  "score": [
+				12000,
+				49.1,
+				13,
+				83.0,
+				7000
+			  ]
+			},
+			"India": {
+			  "name": "India",
+			  "hundredScore": "Yes",
+			  "score": [
+				7680000,
+				38.5,
+				20.8,
+				71.4,
+				13419000
+			  ]
+			},
+			"Nepal": {
+			  "name": "Nepal",
+			  "hundredScore": "Yes",
+			  "score": [
+				493000,
+				37.7,
+				22.2,
+				68.8,
+				374000
+			  ]
+			},
+			"Pakistan": {
+			  "name": "Pakistan",
+			  "hundredScore": "Yes",
+			  "score": [
+				2854000,
+				21.5,
+				28.3,
+				54.5,
+				2126000
+			  ]
+			}
+		  }
+       },
+        "Caribbean, Central & South America": {
+          "label": "Caribbean, Central & South America",
+          "countries": {
+            "Bolivia": {
+              "name": "Bolivia",
+              "hundredScore": "No",
+              "score": [
+				119000,
+				29.4,
+				37.9,
+				52.8,
+				318000
+              ]
+            },
+            "Haiti": {
+              "name": "Haiti",
+              "hundredScore": "Yes",
+              "score": [
+                106000,
+                23.8,
+                36.3,
+                48.7,
+                247000
+              ]
+            },
+            "Honduras": {
+			  "name": "Honduras",
+			  "hundredScore": "Yes",
+			  "score": [
+				90000,
+				42.8,
+				19.7,
+				76.3,
+				152000
+			  ]
+			},
+			"Nicaragua": {
+			  "name": "Nicaragua",
+			  "hundredScore": "Yes",
+			  "score": [
+				42000,
+				50.8,
+				11,
+				87.3,
+				90000
+			  ]
+			}
+		  }
+       }
+
+
+        
+      }
+    }
+    
+  }
+}
