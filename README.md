@@ -1,4 +1,4 @@
-# nov10
+# Highchart
 Main technologies used in this project are Vue, Highchart, Highmap.
 Data Analysis based on highchart , Highmaps and Table  Structure.
 Multiple chart analysis which includes bar chart, column chart, line chart, area chart.
